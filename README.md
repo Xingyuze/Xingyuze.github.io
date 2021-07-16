@@ -1,5 +1,5 @@
 # Xingyuze.github.io
 Hello,
-I'm Xingyuze 
+I'm Xingyuze.
 Hice to meet you.
 
