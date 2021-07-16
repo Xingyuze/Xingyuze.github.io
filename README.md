@@ -1,3 +1,3 @@
 # Xingyuze.github.io
-Hello I'm Xinyuze 
+Hello I'm Xingyuze 
 Hice to meet you
