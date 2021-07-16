@@ -1,2 +1,2 @@
 # Xingyuze.github.io
-I love Linqiunan
+Hello I'm Xinyuze 
