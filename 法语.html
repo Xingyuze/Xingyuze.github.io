@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>法语.html</title>
+	<title>法语.com</title>
 </head>
 
 <style>
@@ -18,11 +18,13 @@
 		font-family: monospace;
 		font-size: 150px;
 		text-align: center;
+		letter-spacing: 30px;
+		margin-right: 100px;
 
 
 	}
 
-	header {
+	body {
 		background-image: url(https://summer-linstitute.oss-cn-shanghai.aliyuncs.com/2019/08/paris.jpg);
 		height: 1000px;
 
@@ -30,10 +32,28 @@
 
 	header summary {
 		font-size: 80px;
-		color: red;
+		color: darkcyan;
+		font-weight: 700;
 		margin-top: 20px;
 		margin-left: 20px;
 	}
+
+	header #summary {
+		margin-top: 200px;
+
+	}
+
+	footer a {
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+		font-size: 45px;
+		margin-top: 500px;
+		display: inline-block;
+		margin-left: 20px;
+		font-weight: 800;
+	}
+
 </style>
 
 <body>
@@ -41,14 +61,14 @@
 		<h1>法语</h1>
 		<section id="desc">
 			<details>
-				<summary>法语一年班</summary>
+				<summary id="summary">法语一年班</summary>
 			</details>
 			<details>
 				<summary>法语二年班</summary>
 			</details>
 		</section>
 	</header>
-
+	<footer><a href="index.html">返回主页</a></footer>
 </body>
 
 </html>
