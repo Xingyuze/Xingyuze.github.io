@@ -4,89 +4,58 @@
 -->
 
 <head>
-	<meta charset="UTF-8">
-	<title>知行书院.com</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
+    <meta charset="UTF-8">
+    <title>知行书院.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
 
-		header h1 {
-			text-align: center;
-			font-size: 100px;
-			font-family: sans-serif;
-			color: #261d1d;
-
-
-		}
-
-
-		body {
-
-
-			height: 1000px;
-			background-repeat: no-repeat;
-			width: 100%;
-			background-color: #d9c4c4;
-
-		}
-
-		header details summary {
-			color: darkblue;
-			font-size: 50px;
-			margin-left: 10px;
-			font-family: "楷体", "楷体_GB2312";
-
-		}
-
-		header details a {
-			color: darkblue;
-			display: block;
-			font-size: 30px;
-			margin-top: 30px;
-			margin-left: 10px;
-			font-family: "楷体", "楷体_GB2312";
-
-		}
-	</style>
+    </style>
 </head>
 
 <body>
+    <h1>知行书院</h1>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title"><h3>课程</h3></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="info.html">信息</a>
 
-	<header>
-		<h1>知行书院</h1>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><h2>课程</h2></span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href=""><a href="m_a.html">数学竞赛</a></a>
+                <a class="mdl-navigation__link" href=""><a href="web.html">Web101 网页制作</a></a>
+                <a class="mdl-navigation__link" href=""><a href="sanguo.html">三国演义</a></a>
+                <a class="mdl-navigation__link" href=""><a href="shiji.html">史记</a></a>
+                <a class="mdl-navigation__link" href=""><a href="m_a.html">数学竞赛</a></a>
+                <a class="mdl-navigation__link" href=""><a href="法语.html">法语</a></a>
+                <a class="mdl-navigation__link" href=""><a href="latein.html">拉丁语</a></a>
+                <a class="mdl-navigation__link" href=""><a href="德语写作.html">德语写作</a></a>
+                <a class="mdl-navigation__link" href=""><a href="english.html">英国散文</a></a>
+                <a class="mdl-navigation__link" href=""><a href="harry_potter.html">《哈利波特》精读</a></a>
+                <a class="mdl-navigation__link" href=""><a href="english_write.html">英语写作</a></a>
+                <a class="mdl-navigation__link" href=""><a href="english_grammar.html">英语语法</a></a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+            </div>
+        </main>
+    </div>
 
-		<details>
-			<summary>课程</summary>
-			<a href="法语.html">法语</a>
-			<a href="latein.html">拉丁语</a>
-			<a href="德语写作.html">德语写作</a>
-			<a href="english.html">英国散文</a>
-			<a href="harry_potter.html">《哈利波特》精读</a>
-			<a href="">英语写作</a>
-			<a href="">英语语法</a>
-			<a href="">英语阅读</a>
-			<a href="">数学竞赛</a>
-			<a href="">数学辅导</a>
-			<a href="">乐理</a>
-			<a href="">声乐</a>
-			<a href="">三国演义</a>
-			<a href="">史记</a>
-			<a href="">汉书</a>
-			<a href="">小古文</a>
-			<a href="">中国古代神话寓言故事</a>
-			<a href="">成人德语</a>
-			<a href="">Python 编程</a>
-			<a href="">Web101 网页制作</a>
-			<a href="">国际象棋</a>
-			<a href="">书法</a>
-		</details>
-		<details>
-			<summary>讲座</summary>
-		</details>
-	</header>
+</body>
 
-
-</body></html>
+</html>
