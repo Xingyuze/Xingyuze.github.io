@@ -1,0 +1,15 @@
+.banner .imgBx div {
+    background-image: url(static/img/profile.jpg);
+    background-size: cover;
+    transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+
+.banner .imgBx div:hover {
+    background-image: url(static/img/profile1.jpg);
+    background-size: cover;
+    background-position: center;
+}

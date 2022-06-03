@@ -1,61 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--   cd /c/_a/Xingyuze.github.io; git add -A; git commit -m "index"; git push;
--->
 
 <head>
     <meta charset="UTF-8">
-    <title>知行书院.com</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <style>
-
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/utilities.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="bg-image.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- 
+        1. git add -A
+        2.
+        3.
+    
+    -->
+    <title>My Portfolio</title>
 </head>
 
 <body>
-    <h1>知行书院</h1>
-    <!-- Always shows a header, even in smaller screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title"><h3>课程</h3></span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="info.html">信息</a>
+    <!--    navbar  -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark nav-color">
+        <div class="container-fluid">
+            <a class="navbar-brand xl fw-bd m-3 text-light" href="#banner-page">My Portfolio</a>
+            <button class="navbar-toggler text-white flex btn-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="text-light">MENU</span><span class="navbar-toggler-icon"></span>
+			</button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 pos-right">
+                    <li class="nav-item m-3">
+                        <a class="nav-link sm fw-md active" aria-current="page" href="#banner-page">HOME</a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link sm fw-md" aria-current="page" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link sm fw-md" aria-current="page" href="#portfolio">PORTFOLIO</a>
+                    </li>
 
-                </nav>
+                    <li class="nav-item m-3">
+                        <a class="nav-link fw-md sm" aria-current="page" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title"><h2>课程</h2></span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href=""><a href="m_a.html">数学竞赛</a></a>
-                <a class="mdl-navigation__link" href=""><a href="web.html">Web101 网页制作</a></a>
-                <a class="mdl-navigation__link" href=""><a href="sanguo.html">三国演义</a></a>
-                <a class="mdl-navigation__link" href=""><a href="shiji.html">史记</a></a>
-                <a class="mdl-navigation__link" href=""><a href="m_a.html">数学竞赛</a></a>
-                <a class="mdl-navigation__link" href=""><a href="法语.html">法语</a></a>
-                <a class="mdl-navigation__link" href=""><a href="latein.html">拉丁语</a></a>
-                <a class="mdl-navigation__link" href=""><a href="德语写作.html">德语写作</a></a>
-                <a class="mdl-navigation__link" href=""><a href="english.html">英国散文</a></a>
-                <a class="mdl-navigation__link" href=""><a href="harry_potter.html">《哈利波特》精读</a></a>
-                <a class="mdl-navigation__link" href=""><a href="english_write.html">英语写作</a></a>
-                <a class="mdl-navigation__link" href=""><a href="english_grammar.html">英语语法</a></a>
-            </nav>
         </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <!-- Your content goes here -->
+    </nav>
+    <!--    banner  -->
+    <header id="banner-page" class="banner py-5 wave">
+        <div class="container flex">
+            <div class="imgBx">
+                <div id="profile"></div>
             </div>
-        </main>
-    </div>
 
+            <div class="loader">
+                <h2 class="text-center xl text-dark">Yuze<span class="hidden">_</span>Xing</h2>
+            </div>
+
+            <h2 class="uppercase title-light-color lg" id="about">About Me</h2>
+            <div class="sep">
+                <hr class=" bg-light">
+                <i class="fa-solid fa-star md text-light icon"></i>
+                <hr class="bg-light">
+
+            </div>
+
+            <div class="boxes flex my-5 ">
+                <div class="card text-color ">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea eligendi dolor accusantium a, reiciendis ab, voluptatum, hic voluptatem quia sit. Ipsum et ea aspernatur minima totam quae culpa hic debitis numquam quas beatae,
+                        explicabo sint dignissimos, cupiditate laudantium in at reprehenderit? Omnis itaque pariatur officiis impedit voluptatem commodi accusantium.</p>
+                </div>
+                <div class="card text-color ">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas hic eum at id laboriosam quibusdam maxime nobis sit odit voluptates quam neque praesentium excepturi magni quod doloribus asperiores officiis inventore expedita dolores,
+                        amet placeat. Est eaque et nostrum saepe nulla quidem enim? Odio asperiores expedita dolorem velit temporibus dolore assumenda?</p>
+                </div>
+            </div>
+            <div class="container-btn flex"><a href="#portfolio"><span>Read More</span></a></div>
+        </div>
+    </header>
+
+    <section id="portfolio my-5 bg-light">
+        <div class="container">
+            <h2 class="lg text-center title-dark-color">PORTFOLIO</h2>
+            <div class="sep">
+                <hr class=" bg-dark">
+                <i class="fa-solid fa-star md text-dark icon"></i>
+                <hr class="bg-dark">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector("navbar");
+            navbar.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </body>
 
 </html>
