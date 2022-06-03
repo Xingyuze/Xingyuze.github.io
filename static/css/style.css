@@ -28,6 +28,7 @@
     min-width: 100%;
 }
 
+
 .navbar li a,
 .navbar span {
     color: var(--dark-color);
@@ -52,7 +53,7 @@
     -o-transform: scale(0.95);
 }
 
-@media all and(min-witdh: 992px) {
+@media all and (min-witdh: 992px) {
     .navbar li a:hover {
         transform: scale(0.6);
         -webkit-transform: scale(0.6);
@@ -229,14 +230,4 @@
     right: -2px;
     box-shadow: -5px 0 0 #0f0, -5px 0 0 #0f0;
     transition-delay: 0s, 0.5s, 1s, 1s;
-}
-
-@media all and(max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-    .flex {
-        flex-direction: column;
-    }
 }

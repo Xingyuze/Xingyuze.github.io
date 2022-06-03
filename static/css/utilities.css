@@ -108,6 +108,16 @@
     text-transform: uppercase;
 }
 
+p {
+    font-size: 1rem;
+}
+
+@media all and (min-width: 992px) {
+    p {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* Backgrounds & colored buttons */
 
@@ -227,13 +237,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-flow: column;
     height: 100%;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -242,6 +253,15 @@
 
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex {
+        flex-flow: row nowrap;
+    }
 }
 
 
