@@ -24,14 +24,14 @@
     <!--    navbar  -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark nav-color">
         <div class="container-fluid">
-            <a class="navbar-brand xl fw-bd m-3 text-light" href="#banner-page">My Portfolio</a>
+            <a class="navbar-brand xl fw-bd m-3 text-light" href="#portfolio">My Portfolio</a>
             <button class="navbar-toggler text-white btn-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="text-light">MENU</span><span class="navbar-toggler-icon"></span>
 			</button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 pos-right">
                     <li class="nav-item m-3">
-                        <a class="nav-link sm fw-md active" aria-current="page" href="#banner-page">HOME</a>
+                        <a class="nav-link sm fw-md active" aria-current="page" href="#portfolio">HOME</a>
                     </li>
                     <li class="nav-item m-3">
                         <a class="nav-link sm fw-md" aria-current="page" href="#about">ABOUT</a>
@@ -47,9 +47,43 @@
             </div>
         </div>
     </nav>
-    <!--    banner  -->
-    <header id="banner-page" class="banner py-5 wave">
+    <nav id="sideNav" class="navbar2 nav-color">
+
+        <div class="container p-5">
+            <div class="imgBx">
+                <div id="profile"></div>
+            </div>
+            <h2 class="text-center sm text-dark my-3">Yuze Xing</h2>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item m-3">
+                    <a class="nav-link sm fw-md active text-center" aria-current="page" href="#portfolio">HOME</a>
+                </li>
+                <li class="nav-item m-3">
+                    <a class="nav-link sm fw-md text-center" aria-current="page" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item m-3">
+                    <a class="nav-link sm fw-md text-center" aria-current="page" href="#projects">PROJECTS</a>
+                </li>
+
+                <li class="nav-item m-3">
+                    <a class="nav-link fw-md sm text-center" aria-current="page" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="portfolio" class="banner section">
         <div class="container flex">
+
+            <div class="desc text-center xl my-5 fw-bd">
+                <a class="text-dark" href="https://www.google.com/search?q=Yuze+Xing&source=lmns&bih=868&biw=1746&hl=de&sa=X&ved=2ahUKEwiWwqz5wJn4AhXcwgIHHUWhDrkQ_AUoAHoECAEQAA">I'm Yuze Xing.</a>
+            </div>
+        </div>
+    </header>
+
+    <!--    about  -->
+    <section id="banner-page" class="banner py-5 section">
+        <div class="container flex">
+
             <div class="imgBx">
                 <div id="profile"></div>
             </div>
@@ -67,22 +101,26 @@
             </div>
 
             <div class="boxes grid my-5 ">
-                <div class="card text-color ">
+                <div class="card">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea eligendi dolor accusantium a, reiciendis ab, voluptatum, hic voluptatem quia sit. Ipsum et ea aspernatur minima totam quae culpa hic debitis numquam quas beatae,
                         explicabo sint dignissimos, cupiditate laudantium in at reprehenderit? Omnis itaque pariatur officiis impedit voluptatem commodi accusantium.</p>
                 </div>
-                <div class="card text-color ">
+                <div class="card">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas hic eum at id laboriosam quibusdam maxime nobis sit odit voluptates quam neque praesentium excepturi magni quod doloribus asperiores officiis inventore expedita dolores,
                         amet placeat. Est eaque et nostrum saepe nulla quidem enim? Odio asperiores expedita dolorem velit temporibus dolore assumenda?</p>
                 </div>
             </div>
-            <div class="container-btn flex"><a href="#portfolio"><span>Read More</span></a></div>
+            <div class="container-btn flex">
+                <a href="#portfolio">
+                    <button type="button" class="btn btn-info btn-lg">Read More</button>
+                </a>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <section id="portfolio my-5 bg-light">
+    <section id="projets" class="my-5 bg-light section">
         <div class="container">
-            <h2 class="lg text-center title-dark-color">PORTFOLIO</h2>
+            <h2 class="uppercase lg text-center title-dark-color">My Projets</h2>
             <div class="sep">
                 <hr class=" bg-dark">
                 <i class="fa-solid fa-star md text-dark icon"></i>
@@ -93,11 +131,7 @@
     </section>
 
 
-    <script type="text/javascript">
-        window.addEventListener("scroll", function() {
-            const navbar = document.querySelector("navbar");
-            navbar.classList.toggle("sticky", window.scrollY > 0);
-        });
+    <script type="text/javascript" src="static/script/scritp.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </body>

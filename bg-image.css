@@ -1,4 +1,17 @@
-.banner .imgBx div {
+#portfolio {
+    background-image: url(static/img/portfolio-bgi.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media all and (min-width: 992px) {
+    #portfolio {
+        background-position: center;
+    }
+}
+
+.imgBx div {
     background-image: url(static/img/profile.jpg);
     background-size: cover;
     transition: 2s;
@@ -8,8 +21,23 @@
     -o-transition: 2s;
 }
 
-.banner .imgBx div:hover {
+.imgBx div:hover {
     background-image: url(static/img/profile1.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.imgBx {
+    margin-top: 88px !important;
+    margin: auto;
+}
+
+.imgBx div {
+    min-width: 150px;
+    min-height: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
