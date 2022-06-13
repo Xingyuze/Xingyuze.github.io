@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/utilities.css">
     <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="bg-image.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <!-- 
         1. git add -A
         2. git commit -m "{...}"
@@ -21,111 +21,84 @@
 </head>
 
 <body>
-    <!--    navbar  -->
-    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark nav-color">
+    <nav class="navbar navbar-expand-lg bg-gradient navbar-dark bg-dark py-3 py-lg-5">
+        <!-- Navbar content -->
         <div class="container-fluid">
-            <a class="navbar-brand xl fw-bd m-3 text-light" href="#portfolio">My Portfolio</a>
-            <button class="navbar-toggler text-white btn-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="text-light">MENU</span><span class="navbar-toggler-icon"></span>
-			</button>
+            <a class="navbar-brand fs-1 text-nowrap text-danger" href="#banner">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 pos-right">
-                    <li class="nav-item m-3">
-                        <a class="nav-link sm fw-md active" aria-current="page" href="#banner-page">HOME</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-2" aria-current="page" href="#banner">Home</a>
                     </li>
-                    <li class="nav-item m-3">
-                        <a class="nav-link sm fw-md" aria-current="page" href="#about">ABOUT</a>
-                    </li>
-                    <li class="nav-item m-3">
-                        <a class="nav-link sm fw-md" aria-current="page" href="#projets">Projets</a>
+                    <li class="nav-item">
+                        <a class="nav-link fs-2" href="#about">About</a>
                     </li>
 
-                    <li class="nav-item m-3">
-                        <a class="nav-link fw-md sm" aria-current="page" href="#contact">CONTACT</a>
-                    </li>
                 </ul>
+
             </div>
         </div>
     </nav>
-    <nav id="sideNav" class="navbar2 nav-color">
-
-        <div class="container p-5">
-            <div class="imgBx">
-                <div id="profile"></div>
-            </div>
-            <h2 class="text-center md text-dark my-3">Yuze Xing</h2>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item m-3">
-                    <a class="nav-link sm fw-md active text-center" aria-current="page" href="#banner-page">HOME</a>
-                </li>
-                <li class="nav-item m-3">
-                    <a class="nav-link sm fw-md text-center" aria-current="page" href="#about">ABOUT</a>
-                </li>
-                <li class="nav-item m-3">
-                    <a class="nav-link sm fw-md text-center" aria-current="page" href="#projects">PROJECTS</a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a class="nav-link fw-md sm text-center" aria-current="page" href="#contact">CONTACT</a>
-                </li>
-            </ul>
+    <!--    header  -->
+    <header id="banner" class="banner bg-image">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+            <img class="shadow-lg m-5 img-fluid border-primary rounded-circle border border-5" src="static/images/my-image.jpg" alt="A pic from me">
         </div>
-    </nav>
-
-    <!--    about  -->
-    <header id="banner-page" class="banner py-5 section">
-        <div class="container flex">
-
-            <div class="imgBx">
-                <div id="profile"></div>
-            </div>
-
-            <div class="loader">
-                <h2 class="text-center xl text-dark">Yuze<span class="hidden">_</span>Xing</h2>
-            </div>
-
-            <h2 class="uppercase title-light-color lg" id="about">About Me</h2>
-            <div class="sep">
-                <hr class=" bg-light">
-                <i class="fa-solid fa-star md text-light icon"></i>
-                <hr class="bg-light">
-
-            </div>
-
-            <div class="boxes grid my-5 ">
-                <div class="card">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea eligendi dolor accusantium a, reiciendis ab, voluptatum, hic voluptatem quia sit. Ipsum et ea aspernatur minima totam quae culpa hic debitis numquam quas beatae,
-                        explicabo sint dignissimos, cupiditate laudantium in at reprehenderit? Omnis itaque pariatur officiis impedit voluptatem commodi accusantium.</p>
-                </div>
-                <div class="card">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas hic eum at id laboriosam quibusdam maxime nobis sit odit voluptates quam neque praesentium excepturi magni quod doloribus asperiores officiis inventore expedita dolores,
-                        amet placeat. Est eaque et nostrum saepe nulla quidem enim? Odio asperiores expedita dolorem velit temporibus dolore assumenda?</p>
-                </div>
-            </div>
-            <div class="container-btn flex">
-                <a href="#portfolio">
-                    <button type="button" class="btn btn-info btn-lg">Read More</button>
-                </a>
-            </div>
-        </div>
+        <h4 class="text-center fs-1 fw-bolder text-info mb-5">My Portfolio</h4>
+        <h1 class="text-center fs--1 fw-bolder text-wrap text-light">Yuze Xing</h1>
+    </div>
     </header>
 
-    <section id="projets" class="my-5 bg-light section">
-        <div class="container">
-            <h2 class="uppercase lg text-center title-dark-color">My Projets</h2>
-            <div class="sep">
-                <hr class=" bg-dark">
-                <i class="fa-solid fa-star md text-dark icon"></i>
-                <hr class="bg-dark">
-
-            </div>
+    <!--    About   -->
+    <section id="about" class="about"">
+        <h1 class="text-center text-secondary">About Me</h1>
+        <div class="sep m-auto">
+            <hr class="bg-secondary">
+            <i class="fa fa-star"></i>
+            <hr class="bg-secondary">
         </div>
-    </section>
+        <section class="bg-success text-white">
+            <div class="container--my">
+                <div class="split d-flex">
+                    <div>
+                        <h2 class="text-center text-warning fs--2">About me in the school</h2>
+                        <p class="fs--5 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ab ratione impedit libero placeat perferendis suscipit qui! Cum sed, possimus nostrum voluptatem facilis neque ducimus, libero ea soluta explicabo modi!</p>
+                    </div>
 
+                    <div class="ImgBx">
+                        <div class="img first-img m-auto">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="bg-primary">
+            <div class="container--my">
+                <div class="split">
+                    <div class="imgBx">
+                        <div class="img sec-img m-auto">
+                    </div>
+                </div>
+
+                    <div>
+                        <h2 class="text-center fs--2 text-warning">My Hobbies</h2>
+                        <p class="fs--5 mx-5 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas! Laudantium, quasi rem? Quo sint laborum, vitae asperiores magni aliquam tenetur provident eveniet error, maxime quas esse sunt itaque officia!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
 
     <script type="text/javascript" src="static/script/scritp.js">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous ">
+    </script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 
 </html>
