@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: orange;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,
+h2 {
+    margin-bottom: 100px;
+}
+
+#zeitanzeige {
+    font-size: 80px;
+    margin-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+button {
+    font-size: 30px;
+    width: 150px;
+    margin: 0 15px;
+    padding: 10px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orangered;
+}

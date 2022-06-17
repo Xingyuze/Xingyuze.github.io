@@ -1,0 +1,48 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    user-select: none;
+}
+
+table {
+    width: 100%;
+    height: 70vh;
+    color: black;
+    background-color: rgb(230, 230, 230);
+}
+
+td {
+    width: 25%;
+    text-align: center;
+    font-size: 24px;
+    background-color: rgb(235, 235, 235);
+}
+
+td:hover {
+    background-color: rgb(225, 225, 225);
+    cursor: pointer;
+}
+
+#resultArea {
+    height: 30vh;
+    background-color: rgb(215, 215, 215);
+    color: black;
+    font-size: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#result {
+    background-color: rgb(188, 200, 19);
+}
+
+#result:hover {
+    background-color: rgb(145, 154, 19);
+}
+
+.highlight {
+    background-color: rgb(230, 230, 230);
+}

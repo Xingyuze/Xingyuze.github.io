@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Todolist</title>
+	<style>
+		body {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		body h1 {
+			color: white;
+			font-family: sans-serif;
+		}
+
+		body #btn {
+			border: none;
+			background-color: red;
+			color: white;
+			font-family: sans-serif;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		body ul {
+			color: white;
+			font-size: 30px;
+		}
+
+		body ul li {
+			font-family: sans-serif;
+			cursor: pointer;
+		}
+
+		body ul li #btn2 {
+			cursor: pointer;
+			border: 1px solid white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Todolist</h1>
+
+	<button id="btn" onclick="addNewItem(); updateList();">Add new Todo</button>
+
+	<ul id="list">
+
+	</ul>
+
+	<script>
+		let shoppingItems = getShoppingItemsFromLocalStorage();
+
+		updateList();
+
+		function getShoppingItemsFromLocalStorage() {
+			let items = localStorage.getItem('shoppingItems');
+
+			if (items == null || items == '') {
+				items = [];
+			} else {
+				items = items.split(',');
+			}
+
+			return items;
+		}
+
+		function addNewItem() {
+			let item = prompt('What do you want to add');
+			if (item === "") {
+				alert('Please fill out the task');
+			} else {
+				if (item !== null){
+				shoppingItems.push(item);
+				localStorage.setItem('shoppingItems', shoppingItems);
+				}
+			}
+		}
+
+		function removeItem(itemIndex) {
+			shoppingItems.splice(itemIndex, 1);
+			localStorage.setItem('shoppingItems', shoppingItems);
+		}
+
+		function updateList() {
+			document.getElementById('list').innerHTML = '';
+
+			for (let index = 0; index < shoppingItems.length; index += 1) {
+				document.getElementById('list').innerHTML += '<li>' + shoppingItems[index] +
+					' <button id="btn2" onclick="removeItem(' + index + '); updateList();">X</button></li>';
+			}
+		}
+	</script>
+
+
+</body></html>

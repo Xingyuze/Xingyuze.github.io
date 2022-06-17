@@ -6,6 +6,9 @@
     padding: 0;
 }
 /*  Utilities   */
+.card{
+  width: 21rem;
+}
 .grid{
   display: grid;
   gap: 20px;
@@ -16,19 +19,18 @@
 
 }
 
-@media all and (min-width: 768px){
-  .grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media all and (min-width: 992px){
-  .grid{
+@media all and (min-width: 992px) {
+  .grid {
     grid-template-columns: repeat(3, 1fr);
+
+  }
+  .card{
+        width: 15rem;
   }
 }
 @media all and (min-width: 1200px){
-  .grid{
-    grid-template-columns: repeat(4, 1fr);
+  .card{
+    width: 18rem;
   }
 }
 .fs--1{
@@ -197,4 +199,15 @@ p, a{
     background-color: #0d6efd !important;
     cursor: pointer;
 
+}
+/*  Projets   */
+.cardBx{
+  position: relative;
+}
+.card{
+  position: absolute;
+  top: 20px;
+}
+.card img{
+  height: 16rem;
 }

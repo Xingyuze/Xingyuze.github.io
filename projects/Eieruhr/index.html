@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="manifest" href="manifest.json">
+	<title>
+		Eieruhr
+	</title>
+	<style>
+		.background-dark {
+			background-color: #262626;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			margin: auto;
+		}
+
+		.margin-top {
+			margin-top: 100px;
+		}
+
+		div i {
+			color: white;
+			font-size: 40px;
+			cursor: pointer;
+		}
+
+		div i:hover {
+			color: wheat;
+		}
+
+		div #egg {
+			height: 300px;
+		}
+
+		#timer {
+			color: white;
+			font-size: 60px;
+			font-family: "Roboto", sans-serif;
+		}
+
+		div #btn {
+			height: 300px;
+			cursor: pointer;
+		}
+
+	</style>
+	<script>
+		let alarm = new Audio("alarm.mp3");
+		let timerStarted = false;
+
+		function startTimer() {
+			if (!timerStarted) {
+				let startTime = new Date().getTime();
+				let fiveMinutes = 1000 * 60 * 5;
+				let endtime = startTime + fiveMinutes;
+
+				setInterval(function() {
+					let timeleft = endtime - new Date().getTime();
+					if (timeleft > 0) {
+						let minutes = timeleft / (1000 * 60);
+						minutes = Math.floor(minutes);
+						let seconds = (timeleft / 1000) % 60;
+						seconds = Math.round(seconds);
+						seconds = ("0" + seconds).slice(-2);
+						let text = "0" + minutes + ":" + seconds
+						timer.innerHTML = text;
+					} else {
+						alarm.play();
+						timer.innerHTML = "00 : 00";
+					}
+				}, 1000)
+				timerStarted = true;
+			}
+		}
+
+	</script>
+</head>
+
+<body class="background-dark">
+	<div class="container">
+		<i class="fa-solid fa-bars"></i>
+	</div>
+	<div><img id="egg" class="center margin-top" src="img/egg.png" alt=""></div>
+	<div id="timer" class="center margin-top">05:00</div>
+	<div><img onclick="startTimer()" id="btn" class="center margin-top" src="img/btn.png" alt=""></div>
+</body>
+
+</html>

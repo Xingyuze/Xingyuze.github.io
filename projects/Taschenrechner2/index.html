@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <style></style>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="resultArea">
+    </div>
+    <table>
+        <tr>
+            <td onclick="clearAll()">AC</td>
+            <td onclick="appendOperation(' ( ')">(</td>
+            <td onclick="appendOperation(' ) ')">)</td>
+            <td onclick="deleteLast()" class="highlight"><i class="fa-solid fa-delete-left"></i></td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td onclick="appendOperation(' / ')" class="highlight">/</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendOperation(' * ')" class="highlight">x</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendOperation(' - ')" class="highlight">-</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendOperation(' . ')">,</td>
+            <td onclick="calculateResult()" id="result">=</td>
+            <td onclick="appendOperation(' + ')" class="highlight">+</td>
+        </tr>
+    </table>
+</body>
+
+</html>
