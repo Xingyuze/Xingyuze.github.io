@@ -1,6 +1,11 @@
 :root {
-    --bg-blue: #262335;
-    --bg-brown: #824936;
+    --blue-hue: 250;
+    --blue-saturation: 20%;
+    --blue-lightness: 17%;
+
+    --brown-hue: 15;
+    --brown-saturation: 41%;
+    --brown-lightness: 36%;
 }
 
 
@@ -16,9 +21,7 @@
 /**
     * * Utilities   */
 
-/** 
-    * ! flexbox, grid
-*/
+
 /**
   * fonts
   * * font-family
@@ -58,7 +61,7 @@ a {
 }
 
 .fs--5 {
-    font-size: .5rem;
+    font-size: .75rem;
 }
 
 @media all and (min-width: 992px) {
@@ -82,6 +85,10 @@ a {
         font-size: 1.5rem;
     }
 }
+
+/** 
+    * ! flexbox, grid
+*/
 
 .flex {
     justify-content: center;
@@ -323,13 +330,23 @@ a {
 
     * about
 */
+.about section:hover {
+    --blue-lightness: 27%;
+    --brown-lightness: 46%;
+    transition: 0.75s;
+}
+
+.about section:hover h3 {
+    transition: .75s;
+    margin-bottom: 5rem;
+}
 
 .about section.first {
-    background-color: var(--bg-blue);
+    background-color: hsl(var(--blue-hue), var(--blue-saturation), var(--blue-lightness));
 }
 
 .about section.sec {
-    background-color: var(--bg-brown);
+    background-color: hsl(var(--brown-hue), var(--brown-saturation), var(--brown-lightness));
 }
 
 .split .imgBx {
