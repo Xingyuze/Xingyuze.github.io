@@ -1,13 +1,18 @@
 :root {
-    --blue-hue: 250;
-    --blue-saturation: 20%;
-    --blue-lightness: 17%;
+    --main-color: linear-gradient(to bottom, hsl(341, 65%, 48%), hsl(285, 40%, 38%));
 
-    --brown-hue: 15;
-    --brown-saturation: 41%;
-    --brown-lightness: 36%;
+    --main-no-gradient-first-color: hsl(341, 65%, 48%);
+    --main-no-gradient-last-color: hsl(285, 40%, 38%);
+
+    --border-color: hsl(285, 40%, 38%);
 }
 
+@media all and (min-width: 768px) {
+    :root {
+        --main-color: linear-gradient(to right, hsl(341, 65%, 48%), hsl(285, 40%, 38%));
+        --dark-color: linear-gradient(to right, hsl(206, 7%, 21%), hsl(214, 6%, 24%));
+    }
+}
 
 *,
 *::before,
@@ -42,8 +47,34 @@ a {
 }
 
 /**
+    * * colors
+*/
+.bg-main {
+    background: var(--main-color);
+}
+
+.bg-main-no-gradient-first-color {
+    background-color: var(--main-no-gradient-first-color);
+}
+
+.bg-main-no-gradient-last-color {
+    background-color: var(--main-no-gradient-last-color);
+}
+
+
+.text-main {
+    background: var(--main-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+
+/**
     * * font-size
 */
+
+
 .fs--1 {
     font-size: 4rem;
 }
@@ -57,11 +88,11 @@ a {
 }
 
 .fs--4 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .fs--5 {
-    font-size: .75rem;
+    font-size: 1.25rem;
 }
 
 @media all and (min-width: 992px) {
@@ -289,6 +320,20 @@ a {
 /**
    * * Utilities end
 */
+/**
+    * * navbar
+*/
+
+
+.navbar form .btn {
+    border: 1px solid var(--border-color);
+    color: var(--light-color);
+}
+
+.navbar form .btn:hover {
+    background: var(--main-color);
+    border: 1px solid transparent;
+}
 
 /**
     * header
@@ -299,7 +344,7 @@ a {
 }
 
 .banner .fa-brands:hover {
-    background-color: #0d6efd !important;
+    background-image: var(--main-color) !important;
     cursor: pointer;
 }
 
@@ -330,23 +375,10 @@ a {
 
     * about
 */
-.about section:hover {
-    --blue-lightness: 27%;
-    --brown-lightness: 46%;
-    transition: 0.75s;
-}
 
 .about section:hover h3 {
     transition: .75s;
     margin-bottom: 5rem;
-}
-
-.about section.first {
-    background-color: hsl(var(--blue-hue), var(--blue-saturation), var(--blue-lightness));
-}
-
-.about section.sec {
-    background-color: hsl(var(--brown-hue), var(--brown-saturation), var(--brown-lightness));
 }
 
 .split .imgBx {
@@ -360,6 +392,10 @@ a {
     padding: 0;
     border: none;
     border-radius: 3px;
+}
+
+.first .split img {
+    object-fit: cover;
 
 }
 
