@@ -14,6 +14,10 @@
     }
 }
 
+
+
+/**
+    * * Utilities   */
 *,
 *::before,
 *::after {
@@ -22,10 +26,9 @@
     padding: 0;
 }
 
-
-/**
-    * * Utilities   */
-
+*:not(h1, h2, h3) {
+    line-height: 1.8;
+}
 
 /**
   * fonts
@@ -39,6 +42,7 @@ h2 span,
 h3 span {
     letter-spacing: 1.5px;
     font-family: "Playfair Display", serif;
+    text-decoration: dashed;
 }
 
 p,
@@ -315,7 +319,14 @@ a {
     margin: 5rem;
 }
 
+.no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
 
+ul li {
+    list-style: none;
+}
 
 /**
    * * Utilities end
@@ -394,13 +405,18 @@ a {
     border-radius: 3px;
 }
 
-.first .split img {
-    object-fit: cover;
-
-}
 
 @media all and (min-width: 992px) {
     .split.grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+
+
+/*  awards  */
+
+p,
+i {
+    display: inline-block;
 }
