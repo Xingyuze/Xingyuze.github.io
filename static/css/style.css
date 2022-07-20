@@ -14,8 +14,6 @@
     }
 }
 
-
-
 /**
     * * Utilities   */
 *,
@@ -73,11 +71,13 @@ a {
     color: transparent !important;
 }
 
+.container-fluid:not(.navbar .container-fluid) {
+    padding: 3rem;
+}
 
 /**
     * * font-size
 */
-
 
 .fs--1 {
     font-size: 4rem;
