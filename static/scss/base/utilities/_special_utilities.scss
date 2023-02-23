@@ -1,0 +1,64 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &:not(h1, h2, h3) {
+        line-height: 1.8;
+    }
+}
+h1, h2{
+    text-decoration: underline $primary solid .25rem;
+    text-underline-offset: .5rem; 
+}
+
+.container-fluid:not(.navbar .container-fluid) {
+    padding: 3rem;
+}
+
+
+
+/*
+    ! flexbox, grid
+*/
+
+.flex {
+    justify-content: center;
+    align-items: center;
+    
+    flex-flow: column nowrap;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*
+    ! media query for flexbox & grid
+*/
+@media all and (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flex {
+        flex-direction: row;
+    }
+}
+
+.no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+ul li {
+    list-style: none;
+}

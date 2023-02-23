@@ -1,0 +1,63 @@
+.about {
+    .container-fluid {
+        section.hobby, section.school {
+            h3 {
+                transform: translateY(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s;
+            }
+
+            p {
+                transform: translateY(0);
+                opacity: 1;
+                transition: transform .75s, opacity .75s;
+            }
+
+            &:hover {
+
+                h3 {
+                    transform: translateY(-1.5rem);
+                    opacity: .75;
+                }
+
+                p {
+                    transform: translateY(1.5rem);
+                    opacity: .75;
+                }
+            }
+        }
+    }
+}
+
+
+.split .imgBx {
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+
+@media all and (min-width: 992px) {
+    .split {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/*
+    * awards
+*/
+
+
+p,
+i {
+    display: inline-block;
+}

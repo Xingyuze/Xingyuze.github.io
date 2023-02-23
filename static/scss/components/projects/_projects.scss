@@ -1,0 +1,95 @@
+@import "../../base/variable/variable";
+.projects {
+    background: $primary;
+    
+    .container-fluid {
+        h2.title {
+            // text-decoraion -> special utilities
+            text-decoration: underline $secondary solid .25rem;
+            text-underline-offset: .5rem;
+            
+            @media all and (min-width: 1440px) {
+                text-decoration-color: $primary;
+            }
+        }
+
+        .cardBx {
+            .card {
+                @media all and (min-width: $breakpoint-XS) {
+                    width: 12rem;
+                    height: 24rem;
+                }
+                        
+                @media all and (min-width: $breakpoint-S) {
+                    width: 18rem;
+                    height: 36rem;
+                }
+            
+                @media all and (min-width: $breakpoint-M) {
+                    width: 24rem;
+                    height: 42rem;
+                }
+            
+                @media all and (min-width: $breakpoint-L) {
+                    width: 18rem;
+                    height: 42rem;
+                }
+            
+                @media all and (min-width: $breakpoint-XL) {
+                    width: 20rem;
+                    height: 42rem;
+                }
+            
+                @media all and (min-width: $breakpoint-XXL) {
+                    width: 24rem;
+                    height: 48rem;
+                }
+                img {
+                    @media all and (min-width: $breakpoint-XS){
+                        display: none;
+                    }
+                    @media all and (min-width: $breakpoint-S){
+                        display: block;
+                        height: 12rem;
+
+                    }
+                    @media all and (min-width: $breakpoint-M){
+                        height: 16rem;
+                    }
+                    @media all and (min-width: $breakpoint-L){
+                        height: 18rem;
+                    }
+                    @media all and (min-width: $breakpoint-XL){
+                        height: 20rem;
+                    }
+                    @media all and (min-width: $breakpoint-XXL){
+                        height: 24rem;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+
+@media all and (min-width: 768px) {
+    .card {
+        width: 15rem;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .card {
+        width: 18rem;
+    }
+
+}
+@media all and (min-width: 1440px) {
+        .projects {
+                background: $main-color;
+        
+            }
+}

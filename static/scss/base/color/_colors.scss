@@ -1,0 +1,24 @@
+@import "../variable/variable";
+
+.bg-main {
+    background: $main-color;
+}
+
+.primary-color {
+    background-color: $primary;
+}
+
+.secondary-color {
+    background-color: $secondary
+}
+
+
+.text-main {
+    background: $main-color;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.text-primary {
+    color: $primary !important;
+}

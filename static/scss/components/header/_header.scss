@@ -1,0 +1,34 @@
+
+@import "../../base/variable/variable";
+header.banner {
+    .container-fluid {
+        p.info{
+            a.mailto {
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline $primary solid .2rem;
+                    text-underline-offset: .5rem;
+                    color: $primary;
+
+                }
+            }
+        }
+        p.desc {
+            font-style: italic;
+        }
+        .iconBx {
+            a {
+                i.fa-brands {
+                    transition: 0.5s;
+                
+                    &:hover {
+                        background-color: $primary !important;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+        }
+    }
+}   
