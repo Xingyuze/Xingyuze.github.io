@@ -1,5 +1,5 @@
 .bg-main {
-  background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25% 75%);
+  background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25%);
 }
 
 .primary-color {
@@ -11,7 +11,7 @@
 }
 
 .text-main {
-  background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25% 75%);
+  background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -29,8 +29,8 @@ h2 span,
 h3 span {
   letter-spacing: 1.5px;
   font-family: "Playfair Display", serif;
-  -webkit-text-decoration: underline radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25% 75%) wavy 0.25rem;
-          text-decoration: underline radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25% 75%) wavy 0.25rem;
+  -webkit-text-decoration: underline radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25%) wavy 0.25rem;
+          text-decoration: underline radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25%) wavy 0.25rem;
 }
 
 p,
@@ -414,7 +414,7 @@ header.banner .container-fluid .iconBx a i.fa-brands:hover {
 }
 @media all and (min-width: 1440px) {
   .projects {
-    background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25% 75%);
+    background: radial-gradient(ellipse farthest-corner at top center, hsl(285deg, 40%, 38%) 0% 25%, hsl(341deg, 65%, 48%) 25%);
   }
 }
 .about .container-fluid section.hobby h3, .about .container-fluid section.school h3 {
@@ -438,6 +438,7 @@ header.banner .container-fluid .iconBx a i.fa-brands:hover {
 
 .split .imgBx {
   margin: auto;
+  overflow: hidden;
 }
 .split .imgBx img {
   width: 100%;
@@ -446,6 +447,13 @@ header.banner .container-fluid .iconBx a i.fa-brands:hover {
   padding: 0;
   border: none;
   border-radius: 3px;
+}
+.split .imgBx img.first {
+  transform: scale(1.15);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media all and (min-width: 992px) {
