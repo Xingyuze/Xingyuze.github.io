@@ -1,17 +1,11 @@
-// variables
 @import "base/variable/variable";
-// colors
-@import "base/color/colors";
-// fonts
-@import "base/fonts/font-family";
-// utilities
+@import "base/mixin/mixins";
 @import "base/utilities/utilities";
-// special_utilities
-@import "base/utilities/special_utilities";
+@import "base/color/colors";
+@import "base/fonts/font-family";
 
-// header
+@import "components/navbar/navbar";
 @import "components/header/header";
-// projects
 @import "components/projects/projects";
-// about
 @import "components/about/about";
+@import "components/contact/contact";

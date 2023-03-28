@@ -1,95 +1,106 @@
-@import "../../base/variable/variable";
 .projects {
-    background: $primary;
-    
-    .container-fluid {
-        h2.title {
-            // text-decoraion -> special utilities
-            text-decoration: underline $secondary solid .25rem;
-            text-underline-offset: .5rem;
-            
-            @media all and (min-width: 1440px) {
-                text-decoration-color: $primary;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .headline {
+            .underline {
+                hr {
+                    @include background($dark-color)
+                }
             }
         }
 
-        .cardBx {
-            .card {
-                @media all and (min-width: $breakpoint-XS) {
-                    width: 12rem;
-                    height: 24rem;
-                }
-                        
-                @media all and (min-width: $breakpoint-S) {
-                    width: 18rem;
-                    height: 36rem;
-                }
-            
-                @media all and (min-width: $breakpoint-M) {
-                    width: 24rem;
-                    height: 42rem;
-                }
-            
-                @media all and (min-width: $breakpoint-L) {
-                    width: 18rem;
-                    height: 42rem;
-                }
-            
-                @media all and (min-width: $breakpoint-XL) {
-                    width: 20rem;
-                    height: 42rem;
-                }
-            
-                @media all and (min-width: $breakpoint-XXL) {
-                    width: 24rem;
-                    height: 48rem;
-                }
-                img {
-                    @media all and (min-width: $breakpoint-XS){
-                        display: none;
-                    }
-                    @media all and (min-width: $breakpoint-S){
-                        display: block;
-                        height: 12rem;
+        .body {
+            margin: 1rem;
+            padding: 1rem;
+            width: 100%;
+            .split {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                margin: 1rem;
+                padding: 1rem;
 
-                    }
-                    @media all and (min-width: $breakpoint-M){
-                        height: 16rem;
-                    }
-                    @media all and (min-width: $breakpoint-L){
-                        height: 18rem;
-                    }
-                    @media all and (min-width: $breakpoint-XL){
-                        height: 20rem;
-                    }
-                    @media all and (min-width: $breakpoint-XXL){
-                        height: 24rem;
+                @include media(tablet) {
+                    flex-direction: row;
+                }
+                .first, .second {
+                    .card {
+                        @include background($dark-color);
+                        border-radius: 1rem;
+                        margin: 1rem;
+                        padding: 1rem;
+                        .img {
+                            @include autoalign();
+                            padding: 0.25rem;
+                            text-align: center;
+                            width: 100%;
+                            height: 15rem;
+                            border-radius: .5rem;
+                            display: none;
+                            
+                            @include media(bigPhone) {
+                                display: inline-block;
+                            }
+                        }
+                        .card-headline {
+                            h3 {
+                                @include underline();
+                                padding: 0.25rem;
+                                margin: 0.25rem;
+                            }
+                            h5 {
+                                padding: 0.25rem;
+                            }
+                            p {
+                                padding: 0.25rem;
+                            }
+                        }
+                        hr {
+                            border: none;
+                            height: 1px;
+                        }
+                        .card-body {
+                            margin: 0.5rem;
+                            padding: 0.5rem;
+                            ul {
+                                margin: .25rem;
+                                padding: .25rem;
+                                list-style: none;
+                                width: 100%;
+                                li {
+                                    width: 100%;
+                                    a {
+                                        @include link();
+
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
+                .first {
+                    .card {
+                        .img {
+                            @include background($dark-color, url("../images/tetris.jpg"));
 
 
+
+                        }
+                    }
+                }
+                .second {
+                    .card {
+                        .img {
+                            @include background($dark-color, url("../images/2dBreakout.jpg"));
+                        }
+                    }
+                }
             }
         }
     }
-}
-
-
-
-@media all and (min-width: 768px) {
-    .card {
-        width: 15rem;
-    }
-}
-
-@media all and (min-width: 992px) {
-    .card {
-        width: 18rem;
-    }
-
-}
-@media all and (min-width: 1440px) {
-        .projects {
-                background: $main-color;
-        
-            }
 }

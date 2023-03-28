@@ -1,34 +1,135 @@
+.home {
+    .container{
+        @include flex(column, flex-start, flex-start);
+        @include media() {
+            @include flex(row, space-around, flex-start);
+        }
+        
+        
 
-@import "../../base/variable/variable";
-header.banner {
-    .container-fluid {
-        p.info{
-            a.mailto {
-                text-decoration: none;
-                &:hover{
-                    text-decoration: underline $primary solid .2rem;
-                    text-underline-offset: .5rem;
-                    color: $primary;
-
+        .infoBx {
+            margin: 1rem;
+            padding: 1rem;
+            .name {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                 h1 {
+                    padding: .5rem;
+            
                 }
             }
-        }
-        p.desc {
-            font-style: italic;
-        }
-        .iconBx {
-            a {
-                i.fa-brands {
-                    transition: 0.5s;
-                
-                    &:hover {
-                        background-color: $primary !important;
-                        cursor: pointer;
+
+            div.desc {
+                margin: .5rem;
+                padding: .5rem;
+
+                .basic {
+                    padding: 0.5rem;
+                }
+                .mail {
+                    padding: 0.5rem;
+
+                    a.email-link {
+                        @include vendorPrefix();
+                        @include link($primary-color);
                     }
                 }
-
             }
+        
+            .social {
+                @include flex(row, flex-start, center);
+                margin: .5rem;
+                padding: .5rem;
+                
+                i {
+                    padding: .25rem;
+                    margin: .25rem;
+                    font-size: 1.5rem;
+                    border: .25rem solid transparent;
+                    border-radius: 50%;
+                    color: $light-color;
+                    cursor: pointer;
 
+                    @include vendorPrefix(transition, .75s);
+
+
+                    &:hover {
+                        @include background($primary-color);
+                        color: $dark-color;
+                        border: .25rem solid $dark-color;
+                    }
+                }
+            }
+        }
+    
+    
+        .skills {
+            @include flex(column, space-between,center);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            margin: 1rem;
+            color: $light-color;
+            
+            @include background($dark-color);
+
+            .headline {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                @include flex(column, center,center);
+                .underline {
+                    display: none;
+                     @include media(bigPhone) {
+                        display: flex;
+                    }
+
+                    hr {
+                        width: 6rem;
+
+                        @include media(laptop) {
+                            width: 12rem;
+                        }
+
+                    }
+                }
+            }
+        
+            .body {
+                margin: .5rem;
+                padding: .5rem;
+
+                ul {
+                    @include flex(column, center, center);
+                    width: 100%;
+                    list-style: none;
+                    @include media(bigPhone) {
+                        @include flex(row, center, center);
+                    }
+                    @include media(tablet) {
+                        @include flex(column, center, center);
+
+                    }
+
+                    @include media(laptop) {
+                        @include flex(row, center, center);
+                    }
+            
+            
+                    li {
+                        @include flex(row, flex-start, center);
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        margin: .25rem;
+                        padding: 0.25rem;
+                        
+                        i {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
         }
     }
-}   
+}
+

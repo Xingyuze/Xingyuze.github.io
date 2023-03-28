@@ -1,0 +1,76 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        .navbar-logo {
+            display: none;
+            padding: 0.25rem;
+            margin: 0.25rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            @include background($dark-color, url("../images/logo.jpg"));
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            @include media() {
+                display: block;
+            }
+            @include media(laptop) {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        ul.navbar-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li.link-item {
+                margin: 0.25rem;
+                font-size: 1rem;
+
+                
+                @include media() {
+                    margin: 0.5rem;
+                }
+                @include media(laptop) {
+                    margin: 1rem;
+                    font-size: 1.5rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    @include link();
+                }
+            }
+        }
+
+        button.mode{
+            padding: .25rem;
+            font-size: .75rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            border: none;
+            @include background($light-color);
+            color: $dark-color;
+
+            @include media() {
+                padding: 1rem;
+                font-size: 1.25rem;
+            }
+            @include media(laptop) {
+                font-size: 1.5rem;
+            }
+        
+
+
+        }
+    }
+}

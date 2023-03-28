@@ -1,0 +1,94 @@
+@mixin vendorPrefix($attribute: transition, $value: 1s) {
+
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    "" {
+        #{$prefix}#{$attribute}: $value;
+    }
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin gradient($direction, $color1, $color2) {
+    background: linear-gradient($direction, $color1, $color2);
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+}
+@mixin media($breakpoint: tablet) {
+    $width: map-get($breakpoints, $breakpoint);
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin underline($line: underline, $color: $primary-color, $style: solid, $thickness: .1rem) {
+    text-decoration: {
+        line: $line;
+        color: $color;
+        style: $style;
+        thickness: $thickness;
+    }
+    text-underline-offset: .5rem;
+}
+
+@mixin background($color:inherit, $image: none,$clip: border-box, $origin: border-box, $blend-mode: normal, $repeat: no-repeat, $pos: center center, $attachment: local, $size: cover) {
+    background: {
+        color: $color;
+        image: $image;
+        clip: $clip;
+        origin: $origin;
+        blend-mode: $blend-mode;
+        repeat: $repeat;
+        position: $pos;
+        attachment: $attachment;
+        size: $size;
+    }
+}
+
+@mixin autoalign {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin toggle($show){
+    @if show {
+        visibility: visible;
+        opacity: 1;
+        @include vendorPrefix(transition, visibility 1s, opacity 1s)
+    }
+    @else if not $show {
+        visibility: hidden;
+        opacity: 0;
+        @include vendorPrefix(transition, visibility 1s, opacity 1s)
+    }
+} 
+
+@mixin link($color: $light-color) {
+    color: $color;
+    &:hover, &:active, &:focus {
+        color: darken($color, 25%);
+    }
+}
+
+@mixin font($size: medium,$weight: normal,$variant: normal,
+$family: "Roboto",$style: normal, $stretch: normal) {
+    font: {
+        size: $size;
+        weight: $weight;
+        variant: $variant;
+        family: $family;
+        style: $style;
+        stretch: $stretch;
+    }
+}

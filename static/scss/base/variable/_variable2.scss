@@ -1,0 +1,6 @@
+@import "variable";
+$light-color:#333;
+$dark-color:  #f5f5f5;
+.img {
+    filter: hue-rotate(180deg);
+}

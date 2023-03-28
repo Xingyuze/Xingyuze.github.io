@@ -1,24 +1,25 @@
-@import "../variable/variable";
-
-.bg-main {
-    background: $main-color;
-}
-
-.primary-color {
-    background-color: $primary;
-}
-
-.secondary-color {
-    background-color: $secondary
-}
-
-
-.text-main {
-    background: $main-color;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
 .text-primary {
-    color: $primary !important;
+    color: $primary-color;
+}
+.text-secondary {
+    color: $secondary-color;
+}
+.text-light {
+    color: $light-color;
+}
+.text-dark {
+    color: $dark-color;
+}
+
+.bg-primary {
+    background-color: $primary-color;
+}
+.bg-secondary {
+    background-color: $secondary-color;
+}
+.bg-light {
+    background-color: $light-color;
+}
+.bg-dark {
+    background-color: $dark-color;
 }

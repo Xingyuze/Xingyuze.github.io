@@ -1,17 +1,33 @@
-@import "../variable/variable";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+@each $tag, $value in $font-sizes {
+    #{$tag} {
+        @include font($value, bolder, titling-caps)
+    }
+    @if $tag == $text {
+        *:not(h1, h2, h3, h4, h5, h6) {
+            @include font($value, normal, normal)
+        }
+    }
+
+}
 h1,
 h2,
 h3,
-h1 span,
-h2 span,
-h3 span {
-    letter-spacing: 1.5px;
+h4,
+h5,
+h6 {
     font-family: "Playfair Display", serif;
-    text-decoration: underline $main-color wavy 0.25rem;
-    
-}
 
-p,
-a {font-family: "Roboto", sans-serif;
+    &::first-letter {
+        color: $primary-color;
+    }
 }
