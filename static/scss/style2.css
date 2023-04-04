@@ -38,7 +38,6 @@
   background-size: cover;
 }
 .underline i {
-  color: #8bc34b;
   display: inline;
   font-size: 1.5rem;
 }
@@ -63,7 +62,7 @@
 }
 .headline h1 {
   text-decoration-line: underline;
-  text-decoration-color: #8bc34b;
+  text-decoration-color: #8B008B;
   text-decoration-style: solid;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.5rem;
@@ -71,13 +70,17 @@
   margin: 0.5rem;
   padding: 0.5rem;
 }
+.headline h3 {
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
 
 .text-primary {
-  color: #8bc34b;
+  color: #8B008B;
 }
 
 .text-secondary {
-  color: #293594;
+  color: #FFA500;
 }
 
 .text-light {
@@ -85,15 +88,15 @@
 }
 
 .text-dark {
-  color: #f5f5f5;
+  color: #fff;
 }
 
 .bg-primary {
-  background-color: #8bc34b;
+  background-color: #8B008B;
 }
 
 .bg-secondary {
-  background-color: #293594;
+  background-color: #FFA500;
 }
 
 .bg-light {
@@ -101,7 +104,7 @@
 }
 
 .bg-dark {
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 * {
@@ -109,7 +112,7 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -118,7 +121,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -127,7 +130,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -136,7 +139,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -145,7 +148,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -154,7 +157,7 @@ h5 {
 }
 
 h6 {
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   font-variant: titling-caps;
   font-family: "Roboto";
@@ -163,9 +166,18 @@ h6 {
 }
 
 text {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   font-variant: titling-caps;
+  font-family: "Roboto";
+  font-style: normal;
+  font-stretch: normal;
+}
+
+p, i, a, span, li {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-variant: normal;
   font-family: "Roboto";
   font-style: normal;
   font-stretch: normal;
@@ -179,20 +191,12 @@ h5,
 h6 {
   font-family: "Playfair Display", serif;
 }
-h1::first-letter,
-h2::first-letter,
-h3::first-letter,
-h4::first-letter,
-h5::first-letter,
-h6::first-letter {
-  color: #8bc34b;
-}
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 .navbar .container {
   display: flex;
@@ -206,7 +210,7 @@ h6::first-letter {
   margin: 0.25rem;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #f5f5f5;
+  background-color: #fff;
   background-image: url("../images/logo.jpg");
   background-clip: border-box;
   background-origin: border-box;
@@ -216,7 +220,7 @@ h6::first-letter {
   background-attachment: local;
   background-size: cover;
   border-radius: 50%;
-  border: 1px solid #8bc34b;
+  border: 1px solid #8B008B;
 }
 @media screen and (min-width: 768px) {
   .navbar .container .navbar-logo {
@@ -258,6 +262,10 @@ h6::first-letter {
   color: black;
 }
 .navbar .container button.mode {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 0.25rem;
   font-size: 0.75rem;
   border-radius: 0.5rem;
@@ -272,7 +280,7 @@ h6::first-letter {
   background-position: center center;
   background-attachment: local;
   background-size: cover;
-  color: #f5f5f5;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .navbar .container button.mode {
@@ -289,65 +297,77 @@ h6::first-letter {
 .home .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home .container .main {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
-  .home .container {
+  .home .container .main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
   }
 }
-.home .container .infoBx {
+.home .container .main .infoBx {
   margin: 1rem;
   padding: 1rem;
 }
-.home .container .infoBx .name {
-  margin: 0.5rem;
-  padding: 0.5rem;
+.home .container .main .infoBx .name {
+  margin: 0.75rem;
+  padding: 0.75rem;
 }
-.home .container .infoBx .name h1 {
-  padding: 0.5rem;
+.home .container .main .infoBx .name h1 {
+  margin: 0.25rem;
+  padding: 0.25rem;
 }
-.home .container .infoBx div.desc {
-  margin: 0.5rem;
-  padding: 0.5rem;
+.home .container .main .infoBx .name h1::first-letter {
+  color: #FFA500;
 }
-.home .container .infoBx div.desc .basic {
-  padding: 0.5rem;
+.home .container .main .infoBx div.desc {
+  margin: 0.75rem;
+  padding: 0.75rem;
 }
-.home .container .infoBx div.desc .mail {
-  padding: 0.5rem;
+.home .container .main .infoBx div.desc .basic {
+  margin: 0.25rem;
+  padding: 0.25rem;
 }
-.home .container .infoBx div.desc .mail a.email-link {
+.home .container .main .infoBx div.desc .mail {
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+.home .container .main .infoBx div.desc .mail a.email-link {
   transition: 1s;
-  color: #8bc34b;
+  color: #FFA500;
 }
-.home .container .infoBx div.desc .mail a.email-link:hover, .home .container .infoBx div.desc .mail a.email-link:active, .home .container .infoBx div.desc .mail a.email-link:focus {
-  color: #4a6b24;
+.home .container .main .infoBx div.desc .mail a.email-link:hover, .home .container .main .infoBx div.desc .mail a.email-link:active, .home .container .main .infoBx div.desc .mail a.email-link:focus {
+  color: #805300;
 }
-.home .container .infoBx .social {
+.home .container .main .infoBx div.desc .link {
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+.home .container .main .infoBx .social {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 0.75rem;
+  padding: 0.75rem;
 }
-.home .container .infoBx .social i {
-  padding: 0.25rem;
-  margin: 0.25rem;
-  font-size: 1.5rem;
-  border: 0.25rem solid transparent;
+.home .container .main .infoBx .social i {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 2rem;
   border-radius: 50%;
   color: #333;
   cursor: pointer;
-  transition: 0.75s;
-}
-.home .container .infoBx .social i:hover {
-  background-color: #8bc34b;
+  background-color: #fff;
   background-image: none;
   background-clip: border-box;
   background-origin: border-box;
@@ -356,8 +376,52 @@ h6::first-letter {
   background-position: center center;
   background-attachment: local;
   background-size: cover;
-  color: #f5f5f5;
-  border: 0.25rem solid #f5f5f5;
+  transition: 0.75s;
+}
+.home .container .main .infoBx .social i:hover {
+  background-color: #FFA500;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+}
+.home .container .btn .next {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+.home .container .btn .next a.about {
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #FFA500;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  color: #333;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.home .container .btn .next a.about:hover {
+  background-color: #ffd280;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  box-shadow: 0 0 1rem #FFA500;
 }
 .home .container .skills {
   display: flex;
@@ -368,7 +432,7 @@ h6::first-letter {
   padding: 1rem;
   margin: 1rem;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #fff;
   background-image: none;
   background-clip: border-box;
   background-origin: border-box;
@@ -386,6 +450,9 @@ h6::first-letter {
   justify-content: center;
   align-items: center;
 }
+.home .container .skills .headline h1::first-letter {
+  color: #8B008B;
+}
 .home .container .skills .headline .underline {
   display: none;
 }
@@ -401,6 +468,9 @@ h6::first-letter {
   .home .container .skills .headline .underline hr {
     width: 12rem;
   }
+}
+.home .container .skills .headline .underline i {
+  color: #8B008B;
 }
 .home .container .skills .body {
   margin: 0.5rem;
@@ -451,17 +521,35 @@ h6::first-letter {
   padding: 0.25rem;
 }
 .home .container .skills .body ul li i {
-  color: #8bc34b;
+  color: #8B008B;
 }
 
 .projects .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.projects .container .headline .underline hr {
-  background-color: #f5f5f5;
+.projects .container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .container .main .headline h1 {
+  margin: 0.25rem;
+  padding: 0.25rem;
+  text-decoration-line: line;
+  text-decoration-color: #FFA500;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.5rem;
+}
+.projects .container .main .headline h1::first-letter {
+  color: #FFA500;
+}
+.projects .container .main .headline .underline hr {
+  background-color: #fff;
   background-image: none;
   background-clip: border-box;
   background-origin: border-box;
@@ -471,26 +559,33 @@ h6::first-letter {
   background-attachment: local;
   background-size: cover;
 }
-.projects .container .body {
+.projects .container .main .headline .underline i {
+  color: #FFA500;
+}
+.projects .container .main .body {
   margin: 1rem;
   padding: 1rem;
   width: 100%;
 }
-.projects .container .body .split {
+.projects .container .main .body .split {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 1rem;
   padding: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .projects .container .body .split {
+  .projects .container .main .body .split {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-.projects .container .body .split .first .card, .projects .container .body .split .second .card {
-  background-color: #f5f5f5;
+.projects .container .main .body .split .first .card,
+.projects .container .main .body .split .second .card {
+  background-color: #fff;
   background-image: none;
   background-clip: border-box;
   background-origin: border-box;
@@ -503,10 +598,11 @@ h6::first-letter {
   margin: 1rem;
   padding: 1rem;
 }
-.projects .container .body .split .first .card .img, .projects .container .body .split .second .card .img {
+.projects .container .main .body .split .first .card .img,
+.projects .container .main .body .split .second .card .img {
   margin-left: auto;
   margin-right: auto;
-  padding: 0.25rem;
+  padding: 0.5rem;
   text-align: center;
   width: 100%;
   height: 15rem;
@@ -514,50 +610,71 @@ h6::first-letter {
   display: none;
 }
 @media screen and (min-width: 480px) {
-  .projects .container .body .split .first .card .img, .projects .container .body .split .second .card .img {
+  .projects .container .main .body .split .first .card .img,
+  .projects .container .main .body .split .second .card .img {
     display: inline-block;
   }
 }
-.projects .container .body .split .first .card .card-headline h3, .projects .container .body .split .second .card .card-headline h3 {
+.projects .container .main .body .split .first .card .card-headline,
+.projects .container .main .body .split .second .card .card-headline {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.projects .container .main .body .split .first .card .card-headline h3,
+.projects .container .main .body .split .second .card .card-headline h3 {
   text-decoration-line: underline;
-  text-decoration-color: #8bc34b;
+  text-decoration-color: #8B008B;
   text-decoration-style: solid;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.5rem;
   padding: 0.25rem;
   margin: 0.25rem;
 }
-.projects .container .body .split .first .card .card-headline h5, .projects .container .body .split .second .card .card-headline h5 {
+.projects .container .main .body .split .first .card .card-headline h3::first-letter,
+.projects .container .main .body .split .second .card .card-headline h3::first-letter {
+  color: #8B008B;
+}
+.projects .container .main .body .split .first .card .card-headline h5,
+.projects .container .main .body .split .second .card .card-headline h5 {
+  margin: 0.25rem;
   padding: 0.25rem;
 }
-.projects .container .body .split .first .card .card-headline p, .projects .container .body .split .second .card .card-headline p {
+.projects .container .main .body .split .first .card .card-headline p,
+.projects .container .main .body .split .second .card .card-headline p {
+  margin: 0.25rem;
   padding: 0.25rem;
 }
-.projects .container .body .split .first .card hr, .projects .container .body .split .second .card hr {
+.projects .container .main .body .split .first .card hr,
+.projects .container .main .body .split .second .card hr {
   border: none;
   height: 1px;
 }
-.projects .container .body .split .first .card .card-body, .projects .container .body .split .second .card .card-body {
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-.projects .container .body .split .first .card .card-body ul, .projects .container .body .split .second .card .card-body ul {
+.projects .container .main .body .split .first .card .card-body,
+.projects .container .main .body .split .second .card .card-body {
   margin: 0.25rem;
   padding: 0.25rem;
+}
+.projects .container .main .body .split .first .card .card-body ul,
+.projects .container .main .body .split .second .card .card-body ul {
   list-style: none;
   width: 100%;
 }
-.projects .container .body .split .first .card .card-body ul li, .projects .container .body .split .second .card .card-body ul li {
+.projects .container .main .body .split .first .card .card-body ul li,
+.projects .container .main .body .split .second .card .card-body ul li {
   width: 100%;
 }
-.projects .container .body .split .first .card .card-body ul li a, .projects .container .body .split .second .card .card-body ul li a {
+.projects .container .main .body .split .first .card .card-body ul li a,
+.projects .container .main .body .split .second .card .card-body ul li a {
   color: #333;
 }
-.projects .container .body .split .first .card .card-body ul li a:hover, .projects .container .body .split .first .card .card-body ul li a:active, .projects .container .body .split .first .card .card-body ul li a:focus, .projects .container .body .split .second .card .card-body ul li a:hover, .projects .container .body .split .second .card .card-body ul li a:active, .projects .container .body .split .second .card .card-body ul li a:focus {
+.projects .container .main .body .split .first .card .card-body ul li a:hover, .projects .container .main .body .split .first .card .card-body ul li a:active, .projects .container .main .body .split .first .card .card-body ul li a:focus,
+.projects .container .main .body .split .second .card .card-body ul li a:hover,
+.projects .container .main .body .split .second .card .card-body ul li a:active,
+.projects .container .main .body .split .second .card .card-body ul li a:focus {
   color: black;
 }
-.projects .container .body .split .first .card .img {
-  background-color: #f5f5f5;
+.projects .container .main .body .split .first .card .img {
+  background-color: #fff;
   background-image: url("../images/tetris.jpg");
   background-clip: border-box;
   background-origin: border-box;
@@ -567,8 +684,8 @@ h6::first-letter {
   background-attachment: local;
   background-size: cover;
 }
-.projects .container .body .split .second .card .img {
-  background-color: #f5f5f5;
+.projects .container .main .body .split .second .card .img {
+  background-color: #fff;
   background-image: url("../images/2dBreakout.jpg");
   background-clip: border-box;
   background-origin: border-box;
@@ -578,6 +695,40 @@ h6::first-letter {
   background-attachment: local;
   background-size: cover;
 }
+.projects .container .btn .next {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+.projects .container .btn .next a.contact {
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #FFA500;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  color: #333;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.projects .container .btn .next a.contact:hover {
+  background-color: #ffd280;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  box-shadow: 0 0 1rem #FFA500;
+}
 
 .contact .container .headline {
   margin: 1rem;
@@ -585,7 +736,7 @@ h6::first-letter {
 }
 .contact .container .headline h1 {
   text-decoration-line: underline;
-  text-decoration-color: #8bc34b;
+  text-decoration-color: #8B008B;
   text-decoration-style: solid;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.5rem;
@@ -594,6 +745,9 @@ h6::first-letter {
   padding: 1rem;
   text-transform: uppercase;
 }
+.contact .container .headline .underline i {
+  color: #8B008B;
+}
 
 .about .container {
   display: flex;
@@ -601,46 +755,66 @@ h6::first-letter {
   justify-content: center;
   align-items: center;
 }
-.about .container .body {
+.about .container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about .container .main .headline h1 {
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+.about .container .main .headline h1::first-letter {
+  color: #8B008B;
+}
+.about .container .main .headline .underline i {
+  color: #8B008B;
+}
+.about .container .main .body {
   padding: 1rem;
   margin: 1rem;
   width: 100%;
 }
-.about .container .body .split {
+.about .container .main .body .split {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .about .container .body .split {
+  .about .container .main .body .split {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 }
-.about .container .body .split .first .card, .about .container .body .split .second .card {
+.about .container .main .body .split .first .card, .about .container .main .body .split .second .card {
   margin: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 0.25rem solid #8bc34b;
+  border: 0.25rem solid #8B008B;
   border-radius: 1rem;
 }
-.about .container .body .split .first .card h3, .about .container .body .split .second .card h3 {
+.about .container .main .body .split .first .card h3, .about .container .main .body .split .second .card h3 {
   text-decoration-line: underline;
-  text-decoration-color: #8bc34b;
+  text-decoration-color: #FFA500;
   text-decoration-style: solid;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.5rem;
   width: 100%;
   text-align: center;
+  margin: 0.25rem;
   padding: 0.25rem;
 }
-.about .container .body .split .first .card p, .about .container .body .split .second .card p {
+.about .container .main .body .split .first .card h3::first-letter, .about .container .main .body .split .second .card h3::first-letter {
+  color: #FFA500;
+}
+.about .container .main .body .split .first .card p, .about .container .main .body .split .second .card p {
   padding: 0.25rem;
   font-size: 1rem;
   font-weight: normal;
@@ -650,7 +824,7 @@ h6::first-letter {
   font-stretch: normal;
 }
 @media screen and (min-width: 768px) {
-  .about .container .body .split .first .card p, .about .container .body .split .second .card p {
+  .about .container .main .body .split .first .card p, .about .container .main .body .split .second .card p {
     font-size: 1.25rem;
     font-weight: normal;
     font-variant: normal;
@@ -658,4 +832,38 @@ h6::first-letter {
     font-style: normal;
     font-stretch: normal;
   }
+}
+.about .container .btn .next {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+.about .container .btn .next a.projects {
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #8B008B;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.about .container .btn .next a.projects:hover {
+  background-color: #ff0cff;
+  background-image: none;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+  box-shadow: 0 0 1rem #8B008B;
 }/*# sourceMappingURL=style2.css.map */

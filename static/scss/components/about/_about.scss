@@ -1,45 +1,93 @@
 .about {
     .container {
-        @include flex(column, center, center);    
+        @include flex(column, center, center);
+        .main {
+            @include flex(column, center, center);    
 
+        
+            .headline {
+                h1 {
+                    margin: 0.25rem;
+                    padding: 0.25rem;
 
-        .body {
-            padding: 1rem;
-            margin: 1rem;
-            width: 100%;
-
-            .split {
-                @include flex(column, center, center);
-
-                @include media() {
-                    @include flex(row, center, center);
+                    &::first-letter {
+                        color: $primary-color;
+                    }
                 }
-                .first, .second {
-                    .card {
-                        margin: 1rem;
-                        padding: 1rem;
-                        @include flex(column, space-between, flex-start);
-                        border: .25rem solid $primary-color;
-                        border-radius: 1rem;
-                    
-                        h3 {
-                            @include underline();
-                            width: 100%;
-                            text-align: center;
-                            padding: 0.25rem;
-                        }
-                    
-                        p {
-                            padding: 0.25rem;
-                            @include font(1rem);
-                    
-                            @include media() {
-                                @include font(1.25rem);
+                .underline {
+                    i {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+
+            .body {
+                padding: 1rem;
+                margin: 1rem;
+                width: 100%;
+
+                .split {
+                    @include flex(column, center, center);
+
+                    @include media() {
+                        @include flex(row, center, center);
+                    }
+                    .first, .second {
+                        .card {
+                            margin: 1rem;
+                            padding: 1rem;
+                            @include flex(column, space-between, flex-start);
+                            border: .25rem solid $primary-color;
+                            border-radius: 1rem;
+                        
+                            h3 {
+                                @include underline(underline, $secondary-color);
+                                width: 100%;
+                                text-align: center;
+                                margin: 0.25rem;
+                                padding: 0.25rem;
+
+                                &::first-letter {
+                                    color: $secondary-color;
+                                }
+                            }
+                        
+                            p {
+                                padding: 0.25rem;
+                                @include font(1rem);
+                        
+                                @include media() {
+                                    @include font(1.25rem);
+                                }
                             }
                         }
                     }
                 }
+            }   
+        }
+        .btn {
+            .next {
+                @include autoalign;
+                padding: 1rem;
+
+                a.projects {
+                    margin: .75rem;
+                    padding: .75rem;
+                    border-radius: .5rem;
+                    @include background($primary-color);
+                    color: $dark-color;
+                    text-decoration: none;
+                    @include vendorPrefix(transition, .5s);
+
+                    &:hover {
+                        @include background(lighten($color: $primary-color,
+                                $amount: 25%));
+
+                        @include shadow(0, 0, 1rem, $primary-color)
+                    }
+                }
             }
-        }   
+        }
     }
 }

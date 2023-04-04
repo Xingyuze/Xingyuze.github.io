@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     .container {
         display: flex;
         justify-content: space-between;
@@ -53,6 +53,7 @@
         }
 
         button.mode{
+            @include flex(row, center, center);
             padding: .25rem;
             font-size: .75rem;
             border-radius: .5rem;

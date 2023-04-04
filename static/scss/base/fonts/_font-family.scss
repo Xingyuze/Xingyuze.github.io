@@ -12,13 +12,14 @@
     #{$tag} {
         @include font($value, bolder, titling-caps)
     }
-    @if $tag == $text {
-        *:not(h1, h2, h3, h4, h5, h6) {
+    @if $tag == text {
+        p, i, a, span, li {
             @include font($value, normal, normal)
         }
     }
 
 }
+
 h1,
 h2,
 h3,
@@ -27,7 +28,4 @@ h5,
 h6 {
     font-family: "Playfair Display", serif;
 
-    &::first-letter {
-        color: $primary-color;
-    }
 }

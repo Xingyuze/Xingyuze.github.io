@@ -1,66 +1,100 @@
 .home {
     .container{
-        @include flex(column, flex-start, flex-start);
-        @include media() {
-            @include flex(row, space-around, flex-start);
-        }
-        
-        
-
-        .infoBx {
-            margin: 1rem;
-            padding: 1rem;
-            .name {
-                margin: 0.5rem;
-                padding: 0.5rem;
-                 h1 {
-                    padding: .5rem;
-            
-                }
+        @include flex(column, center, center);
+        .main {
+            @include flex(column, flex-start, flex-start);
+            @include media() {
+                @include flex(row, space-around, flex-start);
             }
 
-            div.desc {
-                margin: .5rem;
-                padding: .5rem;
-
-                .basic {
-                    padding: 0.5rem;
+            .infoBx {
+                margin: 1rem;
+                padding: 1rem;
+                .name {
+                    margin: 0.75rem;
+                    padding: 0.75rem;
+                    h1 {
+                        margin: 0.25rem;
+                        padding: 0.25rem;
+                        &::first-letter {
+                            color: $secondary-color;
+                        }
+                    }
                 }
-                .mail {
-                    padding: 0.5rem;
 
-                    a.email-link {
-                        @include vendorPrefix();
-                        @include link($primary-color);
+                div.desc {
+                    margin: .75rem;
+                    padding: .75rem;
+
+                    .basic {
+                        margin: 0.25rem;
+                        padding: 0.25rem;
+                    }
+                    .mail {
+                        margin: 0.25rem;
+                        padding: 0.25rem;
+
+                        a.email-link {
+                            @include vendorPrefix();
+                            @include link($secondary-color);
+                        }
+                    }
+                    .link {
+                        margin: 0.25rem;
+                        padding: 0.25rem;
+
+                    }
+                }
+            
+                .social {
+                    @include flex(row, flex-start, center);
+                    margin: .75rem;
+                    padding: .75rem;
+                    
+                    i {
+                        padding: .5rem;
+                        margin: .5rem;
+                        font-size: 2rem;
+                        border-radius: 50%;
+                        color: $light-color;
+                        cursor: pointer;
+                        @include background($dark-color);
+
+                        @include vendorPrefix(transition, .75s);
+
+
+                        &:hover {
+                            @include background($secondary-color);
+                        }
                     }
                 }
             }
-        
-            .social {
-                @include flex(row, flex-start, center);
-                margin: .5rem;
-                padding: .5rem;
-                
-                i {
-                    padding: .25rem;
-                    margin: .25rem;
-                    font-size: 1.5rem;
-                    border: .25rem solid transparent;
-                    border-radius: 50%;
+        }
+        .btn {
+            .next {
+                @include autoalign;
+                padding: 1rem;
+
+                a.about {
+                    margin: .75rem;
+                    padding: .75rem;
+                    border-radius: .5rem;
+                    @include background($secondary-color);
                     color: $light-color;
-                    cursor: pointer;
-
-                    @include vendorPrefix(transition, .75s);
-
+                    text-decoration: none;
+                    @include vendorPrefix(transition, .5s);
 
                     &:hover {
-                        @include background($primary-color);
-                        color: $dark-color;
-                        border: .25rem solid $dark-color;
+                        @include background(lighten($color: $secondary-color,
+                                $amount: 25%));
+
+                        @include shadow(0, 0, 1rem, $secondary-color)
                     }
                 }
             }
         }
+        
+
     
     
         .skills {
@@ -76,6 +110,11 @@
                 margin: 0.5rem;
                 padding: 0.5rem;
                 @include flex(column, center,center);
+                h1 {
+                    &::first-letter {
+                        color: $primary-color;
+                    }
+                }
                 .underline {
                     display: none;
                      @include media(bigPhone) {
@@ -90,9 +129,12 @@
                         }
 
                     }
+                    i {
+                        color: $primary-color;
+                    }
                 }
             }
-        
+         
             .body {
                 margin: .5rem;
                 padding: .5rem;
@@ -130,6 +172,7 @@
                 }
             }
         }
+
     }
 }
 
