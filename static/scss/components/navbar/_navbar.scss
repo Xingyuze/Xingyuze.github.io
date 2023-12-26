@@ -51,27 +51,5 @@
                 }
             }
         }
-
-        button.mode{
-            @include flex(row, center, center);
-            padding: .25rem;
-            font-size: .75rem;
-            border-radius: .5rem;
-            cursor: pointer;
-            border: none;
-            @include background($light-color);
-            color: $dark-color;
-
-            @include media() {
-                padding: 1rem;
-                font-size: 1.25rem;
-            }
-            @include media(laptop) {
-                font-size: 1.5rem;
-            }
-        
-
-
-        }
     }
 }
