@@ -1,20 +1,93 @@
 .contact {
     .container {
-
+        @include flex(column, center, center);
+        color: $light-color;
         .headline {
-            margin: 1rem;
-            padding: 1rem;
             h1 {
-            @include underline();
-                text-align: center;
-                margin: 1rem;
-                padding: 1rem;
-                text-transform: uppercase;
+                margin: 0.25rem;
+                padding: 0.25rem;
+
+                &::first-letter {
+                    color: $primary-color;
+                }
             }
             .underline {
                 i {
-                    color: $primary-color ;
+                    color: $primary-color;
                 }
+            }
+        }
+        .body {
+            padding: 1rem;
+            margin: 1rem;
+            width: 100%;
+            @include flex(column, center, center);
+
+            .form {
+                @include flex(column, center, center);
+
+                .field {
+                    margin: 1rem;
+                    padding: 1rem;
+                    @include flex(column, center, center);
+                    border-radius: 1rem;
+                
+                    label {
+                        @include underline(underline, $primary-color);
+                        width: 100%;
+                        text-align: left;
+                        margin: 0.25rem;
+                        padding: 0.25rem;
+
+                        h3 {
+
+                            &::first-letter {
+                            color: $primary-color;
+                            }
+                        }
+                    }
+                
+                    input, textarea {
+                        width: 100%; // Beide Eingabefelder haben die gleiche Breite
+                        height: 2rem; // Beide Eingabefelder haben die gleiche Höhe
+                        padding: 0.25rem;
+                        @include font(1.5rem); // Größere Schriftgröße für die Nachrichteneingabe
+                
+                        @include media() {
+                            @include font(1.75rem); // Größere Schriftgröße für die Nachrichteneingabe auf größeren Bildschirmen
+                        }
+                        border: none;
+                        border-radius: .5rem;
+                        outline: none;
+                    }
+                }
+            }
+            .btn {
+                .submit {
+                    @include autoalign;
+                    padding: 1rem;
+
+                    button {
+                        margin: .75rem;
+                        padding: .75rem;
+                        border-radius: .5rem;
+                        @include background($primary-color);
+                        color: $dark-color;
+                        text-decoration: none;
+                        @include vendorPrefix(transition, .5s);
+                        font-size: 1.5rem; // Größere Schriftgröße für den Senden-Button
+                        width: 100%;
+                        cursor: pointer;
+                        border: none;
+
+                        &:hover {
+                            @include background(lighten($color: $primary-color,
+                                    $amount: 25%));
+
+                            @include shadow(0, 0, 1rem, $primary-color)
+                        }
+                    }
+                } 
             }
         }
     }

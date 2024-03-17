@@ -60,3 +60,25 @@
         padding: 0.25rem;
     }
 }
+.social {
+    @include flex(row, flex-start, center);
+    margin: .75rem;
+    padding: .75rem;
+    
+    i {
+        padding: .5rem;
+        margin: .5rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: $light-color;
+        cursor: pointer;
+        @include background($dark-color);
+
+        @include vendorPrefix(transition, .75s);
+
+
+        &:hover {
+            @include background($secondary-color);
+        }
+    }
+}

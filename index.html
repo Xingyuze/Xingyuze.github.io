@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="static/scss/style1.css" />
+    <link rel="stylesheet" href="static/scss/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -192,11 +192,50 @@
           </div>
         </div>
         <div class="body">
-          
+          <form class="form">
+            <div class="field">
+              <label for="name"><h3>name</h3></label>
+              <input type="text" id="name" name="name" class="name">
+            </div>
+            <div class="field">
+              <label for="message"><h3>message</h3></label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+          </form>
+          <div class="btn">
+            <div class="submit"><button type="submit">submit</button></div>
+          </div>
         </div>
       </div>
     </section>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <div class="social">
+          <a href="https://discord.com/">
+            <i class="fa-brands fa-discord"></i> </a
+          ><a href="https://github.com">
+            <i class="fa-brands fa-github"></i> </a
+          ><a href="https://www.skype.com">
+            <i class="fa-brands fa-skype"></i>
+          </a>
+        </div>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+    </div>
+    </footer>
     <script src="static/Javascript/script.js"></script>
   </body>
 </html>
